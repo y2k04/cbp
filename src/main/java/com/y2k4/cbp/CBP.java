@@ -17,6 +17,11 @@ public class CBP implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ClientTickEvents.END_CLIENT_TICK.register(client -> mountKeyPressed = mountKey.isPressed());
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (mountKey.isPressed())
+                mountKeyPressed = true;
+            else if (mountKeyPressed == true)
+                mountKeyPressed = false;
+        });
     }
 }
