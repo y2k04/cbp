@@ -20,7 +20,7 @@ public class CBP implements ModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (mountKey.isPressed())
                 mountKeyPressed = true;
-            else if (mountKeyPressed == true)
+            else if (mountKeyPressed)
                 mountKeyPressed = false;
         });
     }
