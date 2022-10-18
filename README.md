@@ -1,5 +1,4 @@
-# cbp
-Chest Boat Patch
+# Chest Boat Patch
 
 - Minecraft version: 1.19.2
 - Fabric Loader compatibility: > 0.14.9
