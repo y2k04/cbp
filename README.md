@@ -1,6 +1,7 @@
 # Chest Boat Patch
 
-- Minecraft version: 1.19.2
+
+- Minecraft version: 1.19.2, 1.19.3
 - Fabric Loader compatibility: > 0.14.9
 
 ## About
