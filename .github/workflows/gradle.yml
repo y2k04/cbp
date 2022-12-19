@@ -21,14 +21,14 @@ jobs:
       with:
         java-version: '18'
         distribution: 'temurin'
-    - name: Make gradlew executable 
-      run: chmod +x ./gradlew
-    - name: Build with Gradle
+    - name: Setup Gradle
       uses: gradle/gradle-build-action@v2.3.3
-      with:
-        arguments: build
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: Execute Gradle build
+      run: ./gradlew build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3.1.1
       with:
-        name: 'cbp-dev_build.jar'
+        name: 'cbp-dev_build'
         path: build/libs/cbp-*.jar
