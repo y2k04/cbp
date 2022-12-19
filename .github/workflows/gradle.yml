@@ -25,5 +25,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: 'cbp-dev_build'
+        name: 'cbp-build.zip'
         path: build/libs/cbp-*.jar
