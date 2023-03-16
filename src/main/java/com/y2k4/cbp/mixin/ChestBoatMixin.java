@@ -25,6 +25,14 @@ public abstract class ChestBoatMixin extends BoatEntity implements VehicleInvent
 
     @Inject(method = "interact", at = @At("HEAD"), cancellable = true)
     public void interact(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        cir.setReturnValue(CBP.mountKeyPressed && canAddPassenger(player) ? super.interact(player, hand) : open(this::emitGameEvent, player));
+        ActionResult actionResult;
+        if (CBP.mountKeyPressed && canAddPassenger(player))
+            actionResult = super.interact(player, hand);
+        else {
+            actionResult = open(player);
+            if (actionResult.isAccepted())
+                emitGameEvent(GameEvent.CONTAINER_OPEN, player);
+        }
+        cir.setReturnValue(actionResult);
     }
 }
