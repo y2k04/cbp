@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cbp",
+  "version": "${version}",
+  "name": "Chest Boat Patch",
+  "description": "Right-click to open the chest boat inventory, not ride it",
+  "authors": [
+    "Y2K4"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/cbp/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.y2k4.cbp.CBP"
+    ]
+  },
+  "mixins": [
+    "cbp.mixins.json"
+  ],
+  "depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": ">=1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

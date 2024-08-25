@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.y2k4.cbp.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ChestBoatMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
